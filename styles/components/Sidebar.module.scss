@@ -1,0 +1,54 @@
+@use "../variables" as *;
+
+.sidebar {
+  width: 250px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .menu {
+    .title {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .links {
+      color: $color-secondary;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      a {
+        display: inline-block;
+        padding: 3px 0;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .more {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: $gray-7;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      &::after {
+        margin-left: 10px;
+        content: "👉";
+        transition: all 0.1s;
+      }
+
+      &:hover {
+        &::after {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

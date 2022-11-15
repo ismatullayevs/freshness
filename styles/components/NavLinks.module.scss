@@ -1,0 +1,12 @@
+@use "../variables" as *;
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a:hover {
+    transition: 0.1s;
+    color: $color-secondary;
+  }
+}

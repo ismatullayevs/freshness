@@ -1,0 +1,52 @@
+@use "./variables" as *;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.6rem;
+  color: $gray-1;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+hr {
+  opacity: 0.05;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input,
+select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,39 @@
+@use "../variables" as *;
+
+.banner {
+  border-radius: 12px;
+  background-image: url("../../public/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  flex: 1;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+
+  .content {
+    .title {
+      font-size: 1.4rem;
+    }
+
+    .heading {
+      margin-top: 15px;
+    }
+  }
+
+  .link {
+    border: 1px solid $color-secondary;
+    padding: 8px 16px;
+    align-self: flex-start;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    &::after {
+      content: "›";
+      margin-left: 10px;
+    }
+  }
+}

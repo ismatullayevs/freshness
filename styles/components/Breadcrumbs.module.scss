@@ -1,0 +1,22 @@
+@use "../variables" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: $gray-3;
+
+  .separator {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:last-of-type {
+    color: $gray-1;
+  }
+}
