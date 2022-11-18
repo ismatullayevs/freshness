@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/components/NavLinks.module.scss";
 import Link from "next/link";
-import { ICategory } from "../types";
+import { ICategory } from "../types/types";
 
 function NavLinks({ categories }: { categories: ICategory[] }) {
   return (

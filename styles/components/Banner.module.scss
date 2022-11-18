@@ -12,8 +12,10 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
+  width: 100%;
 
   .content {
+    margin-bottom: 30px;
     .title {
       font-size: 1.4rem;
     }

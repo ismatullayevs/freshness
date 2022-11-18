@@ -83,3 +83,9 @@
     display: none !important;
   }
 }
+
+@media (max-width: $md) {
+  .bottom {
+    display: none !important;
+  }
+}

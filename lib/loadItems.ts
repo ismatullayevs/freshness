@@ -1,7 +1,15 @@
 import fetcher from "./fetcher";
-import type { IItem, PaginatedData } from "../types/index";
+import type { IItem, PaginatedData } from "../types/types";
 
-export default async function loadItems() {
-  const data: PaginatedData<IItem> = await fetcher("/api/items/");
+async function loadItems({
+  limit,
+  offset,
+}: {
+  limit?: number;
+  offset?: number;
+}) {
+  const data = await fetcher("/api/items/");
   return data.results;
 }
+
+export default loadItems;

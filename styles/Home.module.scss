@@ -5,6 +5,7 @@
   margin: 40px auto 15px;
   display: flex;
   gap: 15px;
+  padding: 0 15px;
 
   .content {
     flex: 1;
@@ -14,5 +15,27 @@
       align-items: center;
       gap: 15px;
     }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 60px;
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+  .banners {
+    flex-direction: column;
   }
 }

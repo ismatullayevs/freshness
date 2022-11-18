@@ -3,19 +3,24 @@ import styles from "../styles/Home.module.scss";
 import { toast } from "react-toastify";
 import Sidebar from "../components/Sidebar";
 import loadCategories from "../lib/loadCategories";
-import { ICategory, IItem } from "../types";
+import { ICategory, IItem, ITag } from "../types/types";
 import Navbar from "../components/Navbar";
 import { GetStaticProps } from "next";
 import loadItems from "../lib/loadItems";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
+import Testimonials from "../components/Testimonials";
+import Link from "next/link";
+import Footer from "../components/Footer";
+import fetcher from "../lib/fetcher";
 
 interface HomeProps {
   categories: ICategory[];
   items: IItem[];
+  tags: ITag[];
 }
 
-export default function Home({ categories, items }: HomeProps) {
+export default function Home({ categories, items, tags }: HomeProps) {
   const notify = () => toast("Wow so easy!");
   return (
     <>
@@ -45,20 +50,27 @@ export default function Home({ categories, items }: HomeProps) {
             />
           </div>
           <div className={styles.cards}>
-            <Card />
+            {items.slice(0, 6).map((item) => (
+              <Card key={item.id} item={item} />
+            ))}
           </div>
         </section>
       </div>
+
+      <Testimonials />
+
+      <Footer tags={tags} />
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const categories = await loadCategories();
-  const items = await loadItems();
+  const items = await loadItems({ limit: 6 });
+  const tags = await fetcher("/api/tags/");
 
   return {
-    props: { categories, items },
+    props: { categories, items, tags },
     revalidate: 10,
   };
 };

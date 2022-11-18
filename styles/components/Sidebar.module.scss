@@ -5,7 +5,7 @@
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 70px;
 
   .menu {
     .title {
@@ -50,5 +50,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: $lg) {
+  .sidebar {
+    display: none !important;
   }
 }

@@ -1,4 +1,4 @@
-import { ICategory } from "../types";
+import { ICategory } from "../types/types";
 import fetcher from "./fetcher";
 
 export default async function loadCategories() {

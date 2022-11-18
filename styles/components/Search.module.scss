@@ -1,23 +1,27 @@
 @use "../variables" as *;
 
 .form {
-  max-width: 40%;
+  max-width: 45%;
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   background-color: $gray-7;
   border: 1px solid $color-border;
   border-radius: 12px;
   padding: 7px 15px;
 
+  .select {
+    width: 130px;
+  }
+
   .search {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 3px 0 3px 20px;
+    padding: 3px 0 3px 15px;
     border-left: 1px solid $color-border;
-    flex: 1;
+    flex: 3;
     font-size: 1.5rem;
 
     .input {

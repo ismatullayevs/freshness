@@ -5,7 +5,7 @@ import Search from "./Search";
 import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 import Badge from "./Badge";
 import NavLinks from "./NavLinks";
-import { ICategory } from "../types";
+import { ICategory } from "../types/types";
 
 function Navbar({ categories }: { categories: ICategory[] }) {
   return (

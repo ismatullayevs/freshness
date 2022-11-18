@@ -1,0 +1,65 @@
+@use "../variables" as *;
+
+.footer {
+  composes: container from "../layout.scss";
+
+  .top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+
+    .links {
+      .title {
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 1.5rem;
+        color: $color-secondary;
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .middle {
+    margin: 40px 0;
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+  .bottom {
+    margin: 60px 0 20px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: $md) {
+  .top {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .top {
+    grid-template-columns: 1fr !important;
+  }
+}

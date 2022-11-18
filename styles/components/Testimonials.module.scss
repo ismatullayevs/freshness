@@ -1,0 +1,50 @@
+@use "../variables" as *;
+
+.testimonials {
+  margin: 100px 0;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .title {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  }
+
+  .carousel {
+    .review {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+
+      .quote {
+        font-weight: 500;
+
+        &::before {
+          content: "“";
+          margin-right: 3px;
+        }
+
+        &::after {
+          content: "“";
+          margin-left: 3px;
+        }
+      }
+
+      .name {
+        color: $gray-2;
+      }
+
+      .picture {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+  }
+}

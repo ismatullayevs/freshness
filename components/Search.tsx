@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/components/Search.module.scss";
 import { BiSearch } from "react-icons/bi";
-import { ICategory } from "../types";
+import { ICategory } from "../types/types";
 
 function Search({ categories }: { categories: ICategory[] }) {
   return (

@@ -1,5 +1,7 @@
 import "../styles/globals.scss";
 import "normalize.css/normalize.css";
+import "swiper/css";
+import "swiper/css/navigation";
 import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
 import { SWRConfig } from "swr";

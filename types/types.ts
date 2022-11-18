@@ -13,7 +13,7 @@ export interface IItem {
   created_at: Date;
   modified_at: Date;
   price: string;
-  discount: number;
+  discount?: number;
   category: number;
 }
 
@@ -27,4 +27,9 @@ export interface PaginatedData<T> {
   next: string | null;
   previous: string | null;
   results: T[];
+}
+
+export interface ITag {
+  id: number;
+  title: string;
 }
